@@ -1,0 +1,200 @@
+{
+  "nodes": [
+    {
+      "id": "SUP_1",
+      "name": "Primary National Supplier",
+      "type": "supplier",
+      "capacity_units": 25352,
+      "reliability": 0.96
+    },
+    {
+      "id": "SUP_2",
+      "name": "Regional Backup Supplier",
+      "type": "supplier",
+      "capacity_units": 16901,
+      "reliability": 0.92
+    },
+    {
+      "id": "WH_WEST",
+      "name": "California Distribution Hub",
+      "type": "warehouse",
+      "capacity_units": 9507,
+      "holding_cost": 0.25
+    },
+    {
+      "id": "WH_CENTRAL",
+      "name": "Central & Midwest Hub",
+      "type": "warehouse",
+      "capacity_units": 13732,
+      "holding_cost": 0.22
+    },
+    {
+      "id": "CA_1",
+      "name": "Retail Store CA_1",
+      "type": "store",
+      "state": "CA",
+      "capacity_units": 2957,
+      "holding_cost": 0.5,
+      "stockout_penalty": 5.0,
+      "ordering_cost": 25.0
+    },
+    {
+      "id": "CA_2",
+      "name": "Retail Store CA_2",
+      "type": "store",
+      "state": "CA",
+      "capacity_units": 2957,
+      "holding_cost": 0.5,
+      "stockout_penalty": 5.0,
+      "ordering_cost": 25.0
+    },
+    {
+      "id": "TX_1",
+      "name": "Retail Store TX_1",
+      "type": "store",
+      "state": "TX",
+      "capacity_units": 2957,
+      "holding_cost": 0.5,
+      "stockout_penalty": 5.0,
+      "ordering_cost": 25.0
+    },
+    {
+      "id": "TX_2",
+      "name": "Retail Store TX_2",
+      "type": "store",
+      "state": "TX",
+      "capacity_units": 2957,
+      "holding_cost": 0.5,
+      "stockout_penalty": 5.0,
+      "ordering_cost": 25.0
+    },
+    {
+      "id": "WI_1",
+      "name": "Retail Store WI_1",
+      "type": "store",
+      "state": "WI",
+      "capacity_units": 2957,
+      "holding_cost": 0.5,
+      "stockout_penalty": 5.0,
+      "ordering_cost": 25.0
+    },
+    {
+      "id": "WI_2",
+      "name": "Retail Store WI_2",
+      "type": "store",
+      "state": "WI",
+      "capacity_units": 2957,
+      "holding_cost": 0.5,
+      "stockout_penalty": 5.0,
+      "ordering_cost": 25.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "SUP_1",
+      "target": "WH_WEST",
+      "lead_time_mean": 5.0,
+      "lead_time_std": 1.2,
+      "transport_cost": 0.8
+    },
+    {
+      "source": "SUP_1",
+      "target": "WH_CENTRAL",
+      "lead_time_mean": 4.0,
+      "lead_time_std": 1.0,
+      "transport_cost": 0.75
+    },
+    {
+      "source": "SUP_2",
+      "target": "WH_WEST",
+      "lead_time_mean": 3.0,
+      "lead_time_std": 0.8,
+      "transport_cost": 1.15
+    },
+    {
+      "source": "SUP_2",
+      "target": "WH_CENTRAL",
+      "lead_time_mean": 3.0,
+      "lead_time_std": 0.8,
+      "transport_cost": 1.1
+    },
+    {
+      "source": "WH_WEST",
+      "target": "CA_1",
+      "lead_time_mean": 2.0,
+      "lead_time_std": 0.5,
+      "transport_cost": 0.4
+    },
+    {
+      "source": "WH_WEST",
+      "target": "CA_2",
+      "lead_time_mean": 2.0,
+      "lead_time_std": 0.5,
+      "transport_cost": 0.45
+    },
+    {
+      "source": "WH_CENTRAL",
+      "target": "TX_1",
+      "lead_time_mean": 2.0,
+      "lead_time_std": 0.6,
+      "transport_cost": 0.45
+    },
+    {
+      "source": "WH_CENTRAL",
+      "target": "TX_2",
+      "lead_time_mean": 2.0,
+      "lead_time_std": 0.6,
+      "transport_cost": 0.5
+    },
+    {
+      "source": "WH_CENTRAL",
+      "target": "WI_1",
+      "lead_time_mean": 3.0,
+      "lead_time_std": 0.7,
+      "transport_cost": 0.55
+    },
+    {
+      "source": "WH_CENTRAL",
+      "target": "WI_2",
+      "lead_time_mean": 3.0,
+      "lead_time_std": 0.7,
+      "transport_cost": 0.6
+    }
+  ],
+  "metadata": {
+    "stores": [
+      "CA_1",
+      "CA_2",
+      "TX_1",
+      "TX_2",
+      "WI_1",
+      "WI_2"
+    ],
+    "high_volume_items": [
+      "FOODS_3_586",
+      "FOODS_3_252",
+      "FOODS_3_587",
+      "FOODS_3_555",
+      "FOODS_3_226",
+      "FOODS_3_120",
+      "FOODS_3_714",
+      "FOODS_3_694"
+    ],
+    "intermittent_items": [
+      "FOODS_3_635",
+      "FOODS_3_319"
+    ],
+    "all_items": [
+      "FOODS_3_586",
+      "FOODS_3_252",
+      "FOODS_3_587",
+      "FOODS_3_555",
+      "FOODS_3_226",
+      "FOODS_3_120",
+      "FOODS_3_714",
+      "FOODS_3_694",
+      "FOODS_3_635",
+      "FOODS_3_319"
+    ]
+  }
+}
