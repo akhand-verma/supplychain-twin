@@ -1,6 +1,8 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import NetworkMap from './pages/NetworkMap.jsx'
+import InventoryForecast from './pages/InventoryForecast.jsx'
+
 
 function Placeholder({ title }) {
   return (
@@ -34,7 +36,7 @@ export default function App() {
       <Container fluid className="px-4 pb-5">
         <Routes>
           <Route path="/" element={<NetworkMap />} />
-          <Route path="/inventory" element={<Placeholder title="Inventory & Forecast" />} />
+          <Route path="/inventory" element={<InventoryForecast />} />
           <Route path="/lab" element={<Placeholder title="Simulation Lab" />} />
           <Route path="/compare" element={<Placeholder title="Strategy Comparison" />} />
           <Route path="/alerts" element={<Placeholder title="Alerts & Recommendations" />} />
