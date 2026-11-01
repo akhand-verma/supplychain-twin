@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 from . import models  # noqa: F401  (registers tables)
 from . import routes_ai, routes_data, routes_sim
@@ -17,9 +18,11 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Supply Chain Digital Twin API", version="0.1.0", lifespan=lifespan)
 
 # Lets the React dev server (port 5173) call this API
+origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[o.strip() for o in origins],
     allow_methods=["*"],
     allow_headers=["*"],
 )
