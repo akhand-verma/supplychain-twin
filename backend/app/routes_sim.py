@@ -4,7 +4,8 @@ from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from . import mock_engine, models, schemas  # later: swap mock_engine for Person A's package
+from . import models, schemas
+from ml import interface as mock_engine
 from .database import SessionLocal, get_db
 
 router = APIRouter()
