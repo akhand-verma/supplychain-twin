@@ -1,6 +1,12 @@
 {
-  "pinball_loss_p10": 1.0162144557524653,
-  "pinball_loss_p50": 2.4754976517602767,
-  "pinball_loss_p90": 1.3146672040754308,
-  "interval_coverage_80pct": 0.6583333333333333
+  "cv_rmse_mean": 7.5264,
+  "cv_rmse_std": 0.3473,
+  "pinball_loss_p10": 1.2329,
+  "pinball_loss_p50": 2.5184,
+  "pinball_loss_p90": 1.3456,
+  "interval_coverage_80pct": 0.7403,
+  "high_volume_coverage_80pct": 0.8997,
+  "high_volume_pinball_p50": 2.9378,
+  "intermittent_coverage_80pct": 0.1028,
+  "intermittent_pinball_p50": 0.841
 }

@@ -4,6 +4,8 @@
       "id": "SUP_1",
       "name": "Primary National Supplier",
       "type": "supplier",
+      "lat": 39.73,
+      "lon": -104.99,
       "capacity_units": 25352,
       "reliability": 0.96
     },
@@ -11,20 +13,26 @@
       "id": "SUP_2",
       "name": "Regional Backup Supplier",
       "type": "supplier",
+      "lat": 35.14,
+      "lon": -90.04,
       "capacity_units": 16901,
       "reliability": 0.92
     },
     {
       "id": "WH_WEST",
-      "name": "California Distribution Hub",
+      "name": "West Cluster Centroid Hub",
       "type": "warehouse",
+      "lat": 35.8594,
+      "lon": -120.2683,
       "capacity_units": 9507,
       "holding_cost": 0.25
     },
     {
       "id": "WH_CENTRAL",
-      "name": "Central & Midwest Hub",
+      "name": "Central Cluster Centroid Hub",
       "type": "warehouse",
+      "lat": 35.9866,
+      "lon": -93.3447,
       "capacity_units": 13732,
       "holding_cost": 0.22
     },
@@ -33,9 +41,12 @@
       "name": "Retail Store CA_1",
       "type": "store",
       "state": "CA",
-      "capacity_units": 2957,
+      "cluster_warehouse": "WH_WEST",
+      "lat": 34.05,
+      "lon": -118.24,
+      "capacity_units": 3003,
       "holding_cost": 0.5,
-      "stockout_penalty": 5.0,
+      "stockout_penalty": 5.01,
       "ordering_cost": 25.0
     },
     {
@@ -43,9 +54,12 @@
       "name": "Retail Store CA_2",
       "type": "store",
       "state": "CA",
-      "capacity_units": 2957,
+      "cluster_warehouse": "WH_WEST",
+      "lat": 37.77,
+      "lon": -122.41,
+      "capacity_units": 2844,
       "holding_cost": 0.5,
-      "stockout_penalty": 5.0,
+      "stockout_penalty": 4.98,
       "ordering_cost": 25.0
     },
     {
@@ -53,8 +67,11 @@
       "name": "Retail Store TX_1",
       "type": "store",
       "state": "TX",
-      "capacity_units": 2957,
-      "holding_cost": 0.5,
+      "cluster_warehouse": "WH_CENTRAL",
+      "lat": 29.76,
+      "lon": -95.36,
+      "capacity_units": 2929,
+      "holding_cost": 0.45,
       "stockout_penalty": 5.0,
       "ordering_cost": 25.0
     },
@@ -63,9 +80,12 @@
       "name": "Retail Store TX_2",
       "type": "store",
       "state": "TX",
-      "capacity_units": 2957,
-      "holding_cost": 0.5,
-      "stockout_penalty": 5.0,
+      "cluster_warehouse": "WH_CENTRAL",
+      "lat": 32.77,
+      "lon": -96.79,
+      "capacity_units": 4390,
+      "holding_cost": 0.45,
+      "stockout_penalty": 5.24,
       "ordering_cost": 25.0
     },
     {
@@ -73,9 +93,12 @@
       "name": "Retail Store WI_1",
       "type": "store",
       "state": "WI",
-      "capacity_units": 2957,
-      "holding_cost": 0.5,
-      "stockout_penalty": 5.0,
+      "cluster_warehouse": "WH_CENTRAL",
+      "lat": 43.03,
+      "lon": -87.9,
+      "capacity_units": 1975,
+      "holding_cost": 0.45,
+      "stockout_penalty": 4.83,
       "ordering_cost": 25.0
     },
     {
@@ -83,9 +106,12 @@
       "name": "Retail Store WI_2",
       "type": "store",
       "state": "WI",
-      "capacity_units": 2957,
-      "holding_cost": 0.5,
-      "stockout_penalty": 5.0,
+      "cluster_warehouse": "WH_CENTRAL",
+      "lat": 43.07,
+      "lon": -89.4,
+      "capacity_units": 2604,
+      "holding_cost": 0.45,
+      "stockout_penalty": 4.94,
       "ordering_cost": 25.0
     }
   ],
@@ -93,74 +119,144 @@
     {
       "source": "SUP_1",
       "target": "WH_WEST",
-      "lead_time_mean": 5.0,
-      "lead_time_std": 1.2,
-      "transport_cost": 0.8
+      "distance_km": 1407.3,
+      "lead_time_mean": 3.67,
+      "lead_time_std": 0.81,
+      "transport_cost": 0.93
     },
     {
       "source": "SUP_1",
       "target": "WH_CENTRAL",
-      "lead_time_mean": 4.0,
-      "lead_time_std": 1.0,
-      "transport_cost": 0.75
+      "distance_km": 1101.9,
+      "lead_time_mean": 3.2,
+      "lead_time_std": 0.7,
+      "transport_cost": 0.8
     },
     {
       "source": "SUP_2",
       "target": "WH_WEST",
-      "lead_time_mean": 3.0,
-      "lead_time_std": 0.8,
-      "transport_cost": 1.15
+      "distance_km": 2732.8,
+      "lead_time_mean": 5.7,
+      "lead_time_std": 1.25,
+      "transport_cost": 1.53
     },
     {
       "source": "SUP_2",
       "target": "WH_CENTRAL",
-      "lead_time_mean": 3.0,
-      "lead_time_std": 0.8,
-      "transport_cost": 1.1
+      "distance_km": 312.9,
+      "lead_time_mean": 2.0,
+      "lead_time_std": 0.44,
+      "transport_cost": 0.45
     },
     {
       "source": "WH_WEST",
       "target": "CA_1",
-      "lead_time_mean": 2.0,
-      "lead_time_std": 0.5,
-      "transport_cost": 0.4
+      "distance_km": 272.7,
+      "lead_time_mean": 1.55,
+      "lead_time_std": 0.39,
+      "transport_cost": 0.34
     },
     {
       "source": "WH_WEST",
       "target": "CA_2",
-      "lead_time_mean": 2.0,
-      "lead_time_std": 0.5,
-      "transport_cost": 0.45
+      "distance_km": 285.0,
+      "lead_time_mean": 1.57,
+      "lead_time_std": 0.39,
+      "transport_cost": 0.34
     },
     {
       "source": "WH_CENTRAL",
       "target": "TX_1",
-      "lead_time_mean": 2.0,
-      "lead_time_std": 0.6,
-      "transport_cost": 0.45
+      "distance_km": 716.2,
+      "lead_time_mean": 2.43,
+      "lead_time_std": 0.61,
+      "transport_cost": 0.56
     },
     {
       "source": "WH_CENTRAL",
       "target": "TX_2",
-      "lead_time_mean": 2.0,
-      "lead_time_std": 0.6,
-      "transport_cost": 0.5
+      "distance_km": 476.5,
+      "lead_time_mean": 1.95,
+      "lead_time_std": 0.49,
+      "transport_cost": 0.44
     },
     {
       "source": "WH_CENTRAL",
       "target": "WI_1",
-      "lead_time_mean": 3.0,
+      "distance_km": 910.3,
+      "lead_time_mean": 2.82,
       "lead_time_std": 0.7,
-      "transport_cost": 0.55
+      "transport_cost": 0.66
     },
     {
       "source": "WH_CENTRAL",
       "target": "WI_2",
-      "lead_time_mean": 3.0,
-      "lead_time_std": 0.7,
-      "transport_cost": 0.6
+      "distance_km": 855.7,
+      "lead_time_mean": 2.71,
+      "lead_time_std": 0.68,
+      "transport_cost": 0.63
     }
   ],
+  "transfer_cost_matrix": {
+    "WH_WEST": {
+      "CA_1": 0.323,
+      "CA_2": 0.328,
+      "TX_1": 1.289,
+      "TX_2": 1.181,
+      "WI_1": 1.499,
+      "WI_2": 1.444
+    },
+    "WH_CENTRAL": {
+      "CA_1": 1.223,
+      "CA_2": 1.365,
+      "TX_1": 0.522,
+      "TX_2": 0.414,
+      "WI_1": 0.61,
+      "WI_2": 0.585
+    },
+    "CA_1": {
+      "CA_2": 0.451,
+      "TX_1": 1.194,
+      "TX_2": 1.097,
+      "WI_1": 1.467,
+      "WI_2": 1.413
+    },
+    "CA_2": {
+      "CA_1": 0.451,
+      "TX_1": 1.392,
+      "TX_2": 1.274,
+      "WI_1": 1.539,
+      "WI_2": 1.483
+    },
+    "TX_1": {
+      "CA_1": 1.194,
+      "CA_2": 1.392,
+      "TX_2": 0.362,
+      "WI_1": 0.928,
+      "WI_2": 0.907
+    },
+    "TX_2": {
+      "CA_1": 1.097,
+      "CA_2": 1.274,
+      "TX_1": 0.362,
+      "WI_1": 0.821,
+      "WI_2": 0.791
+    },
+    "WI_1": {
+      "CA_1": 1.467,
+      "CA_2": 1.539,
+      "TX_1": 0.928,
+      "TX_2": 0.821,
+      "WI_2": 0.255
+    },
+    "WI_2": {
+      "CA_1": 1.413,
+      "CA_2": 1.483,
+      "TX_1": 0.907,
+      "TX_2": 0.791,
+      "WI_1": 0.255
+    }
+  },
   "metadata": {
     "stores": [
       "CA_1",
@@ -170,6 +266,14 @@
       "WI_1",
       "WI_2"
     ],
+    "cluster_assignments": {
+      "CA_1": "WH_WEST",
+      "CA_2": "WH_WEST",
+      "TX_1": "WH_CENTRAL",
+      "TX_2": "WH_CENTRAL",
+      "WI_1": "WH_CENTRAL",
+      "WI_2": "WH_CENTRAL"
+    },
     "high_volume_items": [
       "FOODS_3_586",
       "FOODS_3_252",
