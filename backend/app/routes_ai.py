@@ -94,22 +94,19 @@ def _parse_with_claude(question: str) -> ParsedRequest:
 
 def _parse_with_keywords(question: str) -> ParsedRequest:
     q = question.lower()
+    groups = {
+        "supplier_outage": ["supplier", "vendor"],
+        "transport_delay": ["delay", "transport", "truck", "shipping", "late"],
+        "warehouse_down": ["warehouse", "depot"],
+        "demand_spike": ["spike", "surge", "demand", "festival", "viral", "promotion"],
+    }
+    hits = [k for k, words in groups.items() if any(re.search(rf"\b{w}", q) for w in words)]
+    explicit = any(re.search(rf"\b{w}", q) for w in ["compound", "both", "multiple", "same time"])
 
-    def has(words):
-        return any(w in q for w in words)
-
-    if has(["compound", "both", "multiple", "same time"]) or (
-        has(["supplier", "vendor"]) and has(["delay", "transport"])
-    ):
+    if explicit or ("supplier_outage" in hits and ("transport_delay" in hits or "warehouse_down" in hits)):
         scenario = "compound"
-    elif has(["supplier", "vendor"]):
-        scenario = "supplier_outage"
-    elif has(["delay", "transport", "truck", "shipping", "late"]):
-        scenario = "transport_delay"
-    elif has(["warehouse", "depot"]):
-        scenario = "warehouse_down"
-    elif has(["spike", "surge", "demand", "festival", "viral", "promotion"]):
-        scenario = "demand_spike"
+    elif hits:
+        scenario = hits[0]
     else:
         scenario = "baseline"
     return ParsedRequest(
@@ -117,7 +114,6 @@ def _parse_with_keywords(question: str) -> ParsedRequest:
         policies=["newsvendor_milp", "fixed_order"],
         interpretation=f"Matched keywords to '{SCENARIO_NAME[scenario]}' (offline mode).",
     )
-
 
 def _run(parsed: ParsedRequest, n_runs: int = 50) -> list[dict]:
     results = []
