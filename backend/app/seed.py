@@ -15,9 +15,9 @@ PRODUCTS = [("Milk 1L", "Dairy", 1.2), ("Bread", "Bakery", 0.9), ("Rice 5kg", "S
             ("Detergent", "Household", 4.8)]
 
 
-def simulate_history(mu, days, rng):
-    """Simple (s,S) store history so the data looks real, with occasional stockouts."""
-    s, S, lead = mu * 2.5, mu * 7, 3
+def simulate_history(mu, days, rng, stressed=False):
+    """Simple (s,S) store history. Stressed stores reorder too late, so they stock out."""
+    s, S, lead = (mu * 2.5, mu * 7, 3) if stressed else (mu * 4.5, mu * 10, 3)
     on_hand, pipeline, rows = S, {}, []
     for d in range(days):
         on_hand += pipeline.pop(d, 0)
@@ -81,7 +81,7 @@ def main():
         wh = warehouses[0] if i < 4 else warehouses[1]
         for p in prods:
             mu = float(rng.uniform(20, 60))
-            rows = simulate_history(mu, HISTORY_DAYS, rng)
+            rows = simulate_history(mu, HISTORY_DAYS, rng, stressed=(i in (2, 6)))
             acc = wh_acc.setdefault((wh.id, p.id),
                                     {"days": [[0.0, 0.0] for _ in range(HISTORY_DAYS)], "mu": 0.0})
             acc["mu"] += mu
@@ -124,7 +124,7 @@ def main():
         need90 = sum(fc[o][2] for o in range(1, lt + 1))
         sev = "high" if oh < need50 else ("medium" if oh < need90 else None)
         if sev:
-            qty = max(1, math.ceil(need90 * 1.5 - oh))
+            qty = max(1, math.ceil(need90 - oh))
             db.add(models.Alert(
                 product_id=p_id, location_id=st_id, date=today, severity=sev,
                 recommended_qty=qty,
