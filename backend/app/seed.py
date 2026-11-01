@@ -124,7 +124,7 @@ def main():
         need90 = sum(fc[o][2] for o in range(1, lt + 1))
         sev = "high" if oh < need50 else ("medium" if oh < need90 else None)
         if sev:
-            qty = max(1, math.ceil(need90 * 1.5 - oh))
+            qty = max(1, math.ceil(need90 - oh))
             db.add(models.Alert(
                 product_id=p_id, location_id=st_id, date=today, severity=sev,
                 recommended_qty=qty,
