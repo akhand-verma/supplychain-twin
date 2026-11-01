@@ -3,7 +3,7 @@ import { NavLink, Route, Routes } from 'react-router-dom'
 import NetworkMap from './pages/NetworkMap.jsx'
 import InventoryForecast from './pages/InventoryForecast.jsx'
 import SimulationLab from './pages/SimulationLab.jsx'
-
+import StrategyComparison from './pages/StrategyComparison.jsx'
 
 function Placeholder({ title }) {
   return (
@@ -39,7 +39,7 @@ export default function App() {
           <Route path="/" element={<NetworkMap />} />
           <Route path="/inventory" element={<InventoryForecast />} />
           <Route path="/lab" element={<SimulationLab />} />
-          <Route path="/compare" element={<Placeholder title="Strategy Comparison" />} />
+          <Route path="/compare" element={<StrategyComparison />} />
           <Route path="/alerts" element={<Placeholder title="Alerts & Recommendations" />} />
           <Route path="/whatif" element={<Placeholder title="What-If Chat" />} />
         </Routes>
