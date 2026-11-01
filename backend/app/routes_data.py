@@ -54,8 +54,8 @@ def network(db: Session = Depends(get_db)):
     for loc in locs:
         ss = by_loc.get(loc.id, [])
         stockouts = sum(1 for s in ss if s.stockout)
-        low = sum(1 for s in ss if s.days_cover < 3)
-        health = "red" if (stockouts or low >= 3) else ("yellow" if low else "green")
+        low = sum(1 for s in ss if s.days_cover < 2)
+        health = "red" if (stockouts >= 1 or low >= 3) else ("yellow" if low >= 2 else "green")
         nodes.append({
             "id": loc.id, "name": loc.name, "type": loc.type, "x": loc.x, "y": loc.y,
             "health": health, "stockouts": stockouts, "low_stock_items": low,
