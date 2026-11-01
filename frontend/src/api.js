@@ -37,4 +37,6 @@ export const api = {
   getJob: (id) => request(`/simulate/${id}`),
   monteCarlo: (body) => post('/montecarlo', body),
   getMcJob: (id) => request(`/montecarlo/${id}`),
+  whatIf: (question) => post('/whatif', { question }),
+  report: () => request('/report'),
 }

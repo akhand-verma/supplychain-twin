@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from . import models  # noqa: F401  (registers tables)
-from . import routes_data, routes_sim
+from . import routes_ai, routes_data, routes_sim
 from .database import Base, engine
 
 
@@ -32,3 +32,4 @@ def health():
 
 app.include_router(routes_data.router)
 app.include_router(routes_sim.router)
+app.include_router(routes_ai.router)

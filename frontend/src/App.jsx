@@ -5,6 +5,7 @@ import InventoryForecast from './pages/InventoryForecast.jsx'
 import SimulationLab from './pages/SimulationLab.jsx'
 import StrategyComparison from './pages/StrategyComparison.jsx'
 import AlertsPage from './pages/AlertsPage.jsx'
+import WhatIf from './pages/WhatIf.jsx'
 
 function Placeholder({ title }) {
   return (
@@ -42,7 +43,7 @@ export default function App() {
           <Route path="/lab" element={<SimulationLab />} />
           <Route path="/compare" element={<StrategyComparison />} />
           <Route path="/alerts" element={<AlertsPage />} />
-          <Route path="/whatif" element={<Placeholder title="What-If Chat" />} />
+          <Route path="/whatif" element={<WhatIf />} />
         </Routes>
       </Container>
     </>

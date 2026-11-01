@@ -5,3 +5,4 @@ psycopg[binary]
 pydantic>=2
 python-dotenv
 numpy
+anthropic
