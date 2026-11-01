@@ -59,6 +59,7 @@ def predict_winner_quantiles(bundle: dict, df_slice: pd.DataFrame) -> dict:
     # Outer Quantiles = 0.2 * coeff_tuning + 0.5 * lgb_quantile + 0.3 * hist_sales_quantiles
     # Plus 1.025 right-skewness amplification on P90
     # Snap P10 to 0 when expected low-quantile demand is fractional (< 0.5 units) or zero-inflated
+    p10 = 0.25 * (p50 * mults["p10"]) + 0.45 * lgb_p10 + 0.30 * hist_p10
     zero_rate = df_slice["zero_rate_28"].values if "zero_rate_28" in df_slice else np.zeros(len(p10))
     p10 = np.where((p10 < 0.5) | (zero_rate >= 0.30), 0.0, p10)
     p90 = np.maximum(p50 + 1.0, (0.25 * (p50 * mults["p90"]) + 0.45 * lgb_p90 + 0.30 * hist_p90) * 1.025)

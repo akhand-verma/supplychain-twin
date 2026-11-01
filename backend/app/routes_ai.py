@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from . import mock_engine, models  # later: swap mock_engine for Person A's package
+from . import models, sim_engine
 from .catalog import POLICIES, POLICY_KEYS, SCENARIO_KEYS, SCENARIOS
 from .database import get_db
 
@@ -115,11 +115,11 @@ def _parse_with_keywords(question: str) -> ParsedRequest:
         interpretation=f"Matched keywords to '{SCENARIO_NAME[scenario]}' (offline mode).",
     )
 
-def _run(parsed: ParsedRequest, n_runs: int = 50) -> list[dict]:
+def _run(parsed: ParsedRequest, n_runs: int = 10) -> list[dict]:
     results = []
     for p in parsed.policies:
-        mc = mock_engine.run_monte_carlo(p, parsed.scenario, n_runs)
-        one = mock_engine.run_simulation(p, parsed.scenario, seed=1)
+        mc = sim_engine.run_monte_carlo(p, parsed.scenario, n_runs)
+        one = sim_engine.run_simulation(p, parsed.scenario, seed=1)
         results.append({
             "policy": p,
             "name": POLICY_NAME[p],

@@ -1,15 +1,30 @@
 """Run from the backend folder with:  python -m app.seed
 WARNING: wipes and recreates all tables. Stop the API first."""
+import json
 import math
 from datetime import date, timedelta
+from pathlib import Path
 
 import numpy as np
 
-from . import mock_engine, models
+from . import models, sim_engine
 from .catalog import POLICIES, SCENARIOS
 from .database import Base, SessionLocal, engine
 
 HISTORY_DAYS = 60
+KPI_RUNS = 20
+
+
+def make_kpi_data(n: int = KPI_RUNS) -> list[dict]:
+    rows = []
+    for sc in SCENARIOS:
+        for p in POLICIES:
+            r = sim_engine.run_monte_carlo(p["key"], sc["key"], n)
+            for m, mean in r["kpi_mean"].items():
+                lo, hi = r["kpi_ci"][m]
+                rows.append({"policy_key": p["key"], "scenario_key": sc["key"], "metric": m,
+                             "mean": mean, "ci_low": lo, "ci_high": hi, "n_runs": n})
+    return rows
 PRODUCTS = [("Milk 1L", "Dairy", 1.2), ("Bread", "Bakery", 0.9), ("Rice 5kg", "Staples", 6.5),
             ("Cooking Oil 1L", "Staples", 3.1), ("Eggs (12)", "Dairy", 2.4),
             ("Detergent", "Household", 4.8)]
@@ -131,15 +146,17 @@ def main():
                 message=(f"{prod_name[p_id]} at {store_name[st_id]}: {round(oh)} units on hand "
                          f"vs ~{round(need50)} expected demand over the next {lt} days.")))
 
-    # ---- precomputed Monte Carlo KPIs (100 runs each)
-    n = 100
-    for s in SCENARIOS:
-        for p in POLICIES:
-            r = mock_engine.run_monte_carlo(p["key"], s["key"], n)
-            for m, mean in r["kpi_mean"].items():
-                lo, hi = r["kpi_ci"][m]
-                db.add(models.KpiResult(policy_key=p["key"], scenario_key=s["key"], metric=m,
-                                        mean=mean, ci_low=lo, ci_high=hi, n_runs=n))
+    # ---- precomputed Monte Carlo KPIs (real ML simulator).
+    # Computed once with `python -m app.make_kpi_seed` and stored in kpi_seed.json,
+    # so starting the stack does not re-run hundreds of simulations.
+    kpi_file = Path(__file__).with_name("kpi_seed.json")
+    if kpi_file.exists():
+        data = json.loads(kpi_file.read_text())
+    else:
+        print("kpi_seed.json not found, computing it now (a few minutes)...")
+        data = make_kpi_data()
+    for row in data:
+        db.add(models.KpiResult(**row))
 
     db.commit()
     db.close()

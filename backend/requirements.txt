@@ -6,3 +6,10 @@ pydantic>=2
 python-dotenv
 numpy
 anthropic
+pandas==3.0.5
+scikit-learn==1.9.1
+scipy
+joblib
+lightgbm==4.7.0
+simpy
+pulp>=2.7,<3

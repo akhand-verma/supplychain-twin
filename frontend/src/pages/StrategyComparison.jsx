@@ -87,7 +87,7 @@ export default function StrategyComparison() {
   const [scenarioKey, setScenarioKey] = useState('')
   const [metricKey, setMetricKey] = useState('total_cost')
   const [source, setSource] = useState('pre')
-  const [nRuns, setNRuns] = useState(200)
+  const [nRuns, setNRuns] = useState(20)
   const [live, setLive] = useState(null)
   const [running, setRunning] = useState(false)
   const [error, setError] = useState(null)

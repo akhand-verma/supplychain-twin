@@ -1,0 +1,1082 @@
+[
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "baseline",
+  "metric": "total_cost",
+  "mean": 83324.385,
+  "ci_low": 82776.0826,
+  "ci_high": 83872.6874,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "baseline",
+  "metric": "fill_rate",
+  "mean": 0.8452,
+  "ci_low": 0.8422,
+  "ci_high": 0.8481,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "baseline",
+  "metric": "service_level",
+  "mean": 0.2567,
+  "ci_low": 0.2349,
+  "ci_high": 0.2784,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "baseline",
+  "metric": "unmet_units",
+  "mean": 5549.65,
+  "ci_low": 5443.821,
+  "ci_high": 5655.479,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "baseline",
+  "metric": "recovery_days",
+  "mean": 0.0,
+  "ci_low": 0.0,
+  "ci_high": 0.0,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "baseline",
+  "metric": "total_cost",
+  "mean": 78012.115,
+  "ci_low": 77796.3808,
+  "ci_high": 78227.8492,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "baseline",
+  "metric": "fill_rate",
+  "mean": 0.9956,
+  "ci_low": 0.995,
+  "ci_high": 0.9962,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "baseline",
+  "metric": "service_level",
+  "mean": 0.9983,
+  "ci_low": 0.9951,
+  "ci_high": 1.0016,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "baseline",
+  "metric": "unmet_units",
+  "mean": 158.5,
+  "ci_low": 137.9053,
+  "ci_high": 179.0947,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "baseline",
+  "metric": "recovery_days",
+  "mean": 0.0,
+  "ci_low": 0.0,
+  "ci_high": 0.0,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "baseline",
+  "metric": "total_cost",
+  "mean": 78012.115,
+  "ci_low": 77796.3808,
+  "ci_high": 78227.8492,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "baseline",
+  "metric": "fill_rate",
+  "mean": 0.9956,
+  "ci_low": 0.995,
+  "ci_high": 0.9962,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "baseline",
+  "metric": "service_level",
+  "mean": 0.9983,
+  "ci_low": 0.9951,
+  "ci_high": 1.0016,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "baseline",
+  "metric": "unmet_units",
+  "mean": 158.5,
+  "ci_low": 137.9053,
+  "ci_high": 179.0947,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "baseline",
+  "metric": "recovery_days",
+  "mean": 0.0,
+  "ci_low": 0.0,
+  "ci_high": 0.0,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "baseline",
+  "metric": "total_cost",
+  "mean": 78012.115,
+  "ci_low": 77796.3808,
+  "ci_high": 78227.8492,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "baseline",
+  "metric": "fill_rate",
+  "mean": 0.9956,
+  "ci_low": 0.995,
+  "ci_high": 0.9962,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "baseline",
+  "metric": "service_level",
+  "mean": 0.9983,
+  "ci_low": 0.9951,
+  "ci_high": 1.0016,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "baseline",
+  "metric": "unmet_units",
+  "mean": 158.5,
+  "ci_low": 137.9053,
+  "ci_high": 179.0947,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "baseline",
+  "metric": "recovery_days",
+  "mean": 0.0,
+  "ci_low": 0.0,
+  "ci_high": 0.0,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "supplier_outage",
+  "metric": "total_cost",
+  "mean": 110468.785,
+  "ci_low": 110024.0393,
+  "ci_high": 110913.5307,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "supplier_outage",
+  "metric": "fill_rate",
+  "mean": 0.77,
+  "ci_low": 0.7678,
+  "ci_high": 0.7721,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "supplier_outage",
+  "metric": "service_level",
+  "mean": 0.3133,
+  "ci_low": 0.2966,
+  "ci_high": 0.33,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "supplier_outage",
+  "metric": "unmet_units",
+  "mean": 8245.25,
+  "ci_low": 8167.8442,
+  "ci_high": 8322.6558,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "supplier_outage",
+  "metric": "recovery_days",
+  "mean": 1.3,
+  "ci_low": 0.9211,
+  "ci_high": 1.6789,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "supplier_outage",
+  "metric": "total_cost",
+  "mean": 91983.49,
+  "ci_low": 91689.7717,
+  "ci_high": 92277.2083,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "supplier_outage",
+  "metric": "fill_rate",
+  "mean": 0.8306,
+  "ci_low": 0.829,
+  "ci_high": 0.8323,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "supplier_outage",
+  "metric": "service_level",
+  "mean": 0.5316,
+  "ci_low": 0.5259,
+  "ci_high": 0.5374,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "supplier_outage",
+  "metric": "unmet_units",
+  "mean": 6069.8,
+  "ci_low": 6009.2446,
+  "ci_high": 6130.3554,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "supplier_outage",
+  "metric": "recovery_days",
+  "mean": 4.0,
+  "ci_low": 3.682,
+  "ci_high": 4.318,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "supplier_outage",
+  "metric": "total_cost",
+  "mean": 91983.49,
+  "ci_low": 91689.7717,
+  "ci_high": 92277.2083,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "supplier_outage",
+  "metric": "fill_rate",
+  "mean": 0.8306,
+  "ci_low": 0.829,
+  "ci_high": 0.8323,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "supplier_outage",
+  "metric": "service_level",
+  "mean": 0.5316,
+  "ci_low": 0.5259,
+  "ci_high": 0.5374,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "supplier_outage",
+  "metric": "unmet_units",
+  "mean": 6069.8,
+  "ci_low": 6009.2446,
+  "ci_high": 6130.3554,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "supplier_outage",
+  "metric": "recovery_days",
+  "mean": 4.0,
+  "ci_low": 3.682,
+  "ci_high": 4.318,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "supplier_outage",
+  "metric": "total_cost",
+  "mean": 91983.49,
+  "ci_low": 91689.7717,
+  "ci_high": 92277.2083,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "supplier_outage",
+  "metric": "fill_rate",
+  "mean": 0.8306,
+  "ci_low": 0.829,
+  "ci_high": 0.8323,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "supplier_outage",
+  "metric": "service_level",
+  "mean": 0.5316,
+  "ci_low": 0.5259,
+  "ci_high": 0.5374,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "supplier_outage",
+  "metric": "unmet_units",
+  "mean": 6069.8,
+  "ci_low": 6009.2446,
+  "ci_high": 6130.3554,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "supplier_outage",
+  "metric": "recovery_days",
+  "mean": 4.0,
+  "ci_low": 3.682,
+  "ci_high": 4.318,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "transport_delay",
+  "metric": "total_cost",
+  "mean": 107232.1,
+  "ci_low": 106648.1747,
+  "ci_high": 107816.0253,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "transport_delay",
+  "metric": "fill_rate",
+  "mean": 0.7848,
+  "ci_low": 0.7824,
+  "ci_high": 0.7872,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "transport_delay",
+  "metric": "service_level",
+  "mean": 0.315,
+  "ci_low": 0.2983,
+  "ci_high": 0.3317,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "transport_delay",
+  "metric": "unmet_units",
+  "mean": 7713.05,
+  "ci_low": 7627.6031,
+  "ci_high": 7798.4969,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "transport_delay",
+  "metric": "recovery_days",
+  "mean": 1.0,
+  "ci_low": 0.682,
+  "ci_high": 1.318,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "transport_delay",
+  "metric": "total_cost",
+  "mean": 84761.405,
+  "ci_low": 84469.3144,
+  "ci_high": 85053.4956,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "transport_delay",
+  "metric": "fill_rate",
+  "mean": 0.8979,
+  "ci_low": 0.8967,
+  "ci_high": 0.8991,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "transport_delay",
+  "metric": "service_level",
+  "mean": 0.755,
+  "ci_low": 0.7452,
+  "ci_high": 0.7648,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "transport_delay",
+  "metric": "unmet_units",
+  "mean": 3659.75,
+  "ci_low": 3616.9217,
+  "ci_high": 3702.5783,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "transport_delay",
+  "metric": "recovery_days",
+  "mean": 3.8,
+  "ci_low": 3.5707,
+  "ci_high": 4.0293,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "transport_delay",
+  "metric": "total_cost",
+  "mean": 84761.405,
+  "ci_low": 84469.3144,
+  "ci_high": 85053.4956,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "transport_delay",
+  "metric": "fill_rate",
+  "mean": 0.8979,
+  "ci_low": 0.8967,
+  "ci_high": 0.8991,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "transport_delay",
+  "metric": "service_level",
+  "mean": 0.755,
+  "ci_low": 0.7452,
+  "ci_high": 0.7648,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "transport_delay",
+  "metric": "unmet_units",
+  "mean": 3659.75,
+  "ci_low": 3616.9217,
+  "ci_high": 3702.5783,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "transport_delay",
+  "metric": "recovery_days",
+  "mean": 3.8,
+  "ci_low": 3.5707,
+  "ci_high": 4.0293,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "transport_delay",
+  "metric": "total_cost",
+  "mean": 84761.405,
+  "ci_low": 84469.3144,
+  "ci_high": 85053.4956,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "transport_delay",
+  "metric": "fill_rate",
+  "mean": 0.8979,
+  "ci_low": 0.8967,
+  "ci_high": 0.8991,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "transport_delay",
+  "metric": "service_level",
+  "mean": 0.755,
+  "ci_low": 0.7452,
+  "ci_high": 0.7648,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "transport_delay",
+  "metric": "unmet_units",
+  "mean": 3659.75,
+  "ci_low": 3616.9217,
+  "ci_high": 3702.5783,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "transport_delay",
+  "metric": "recovery_days",
+  "mean": 3.8,
+  "ci_low": 3.5707,
+  "ci_high": 4.0293,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "warehouse_down",
+  "metric": "total_cost",
+  "mean": 107232.1,
+  "ci_low": 106648.1747,
+  "ci_high": 107816.0253,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "warehouse_down",
+  "metric": "fill_rate",
+  "mean": 0.7848,
+  "ci_low": 0.7824,
+  "ci_high": 0.7872,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "warehouse_down",
+  "metric": "service_level",
+  "mean": 0.315,
+  "ci_low": 0.2983,
+  "ci_high": 0.3317,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "warehouse_down",
+  "metric": "unmet_units",
+  "mean": 7713.05,
+  "ci_low": 7627.6031,
+  "ci_high": 7798.4969,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "warehouse_down",
+  "metric": "recovery_days",
+  "mean": 1.0,
+  "ci_low": 0.682,
+  "ci_high": 1.318,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "warehouse_down",
+  "metric": "total_cost",
+  "mean": 84761.405,
+  "ci_low": 84469.3144,
+  "ci_high": 85053.4956,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "warehouse_down",
+  "metric": "fill_rate",
+  "mean": 0.8979,
+  "ci_low": 0.8967,
+  "ci_high": 0.8991,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "warehouse_down",
+  "metric": "service_level",
+  "mean": 0.755,
+  "ci_low": 0.7452,
+  "ci_high": 0.7648,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "warehouse_down",
+  "metric": "unmet_units",
+  "mean": 3659.75,
+  "ci_low": 3616.9217,
+  "ci_high": 3702.5783,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "warehouse_down",
+  "metric": "recovery_days",
+  "mean": 3.8,
+  "ci_low": 3.5707,
+  "ci_high": 4.0293,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "warehouse_down",
+  "metric": "total_cost",
+  "mean": 84761.405,
+  "ci_low": 84469.3144,
+  "ci_high": 85053.4956,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "warehouse_down",
+  "metric": "fill_rate",
+  "mean": 0.8979,
+  "ci_low": 0.8967,
+  "ci_high": 0.8991,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "warehouse_down",
+  "metric": "service_level",
+  "mean": 0.755,
+  "ci_low": 0.7452,
+  "ci_high": 0.7648,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "warehouse_down",
+  "metric": "unmet_units",
+  "mean": 3659.75,
+  "ci_low": 3616.9217,
+  "ci_high": 3702.5783,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "warehouse_down",
+  "metric": "recovery_days",
+  "mean": 3.8,
+  "ci_low": 3.5707,
+  "ci_high": 4.0293,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "warehouse_down",
+  "metric": "total_cost",
+  "mean": 84761.405,
+  "ci_low": 84469.3144,
+  "ci_high": 85053.4956,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "warehouse_down",
+  "metric": "fill_rate",
+  "mean": 0.8979,
+  "ci_low": 0.8967,
+  "ci_high": 0.8991,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "warehouse_down",
+  "metric": "service_level",
+  "mean": 0.755,
+  "ci_low": 0.7452,
+  "ci_high": 0.7648,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "warehouse_down",
+  "metric": "unmet_units",
+  "mean": 3659.75,
+  "ci_low": 3616.9217,
+  "ci_high": 3702.5783,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "warehouse_down",
+  "metric": "recovery_days",
+  "mean": 3.8,
+  "ci_low": 3.5707,
+  "ci_high": 4.0293,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "demand_spike",
+  "metric": "total_cost",
+  "mean": 104582.465,
+  "ci_low": 103955.5566,
+  "ci_high": 105209.3734,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "demand_spike",
+  "metric": "fill_rate",
+  "mean": 0.7886,
+  "ci_low": 0.786,
+  "ci_high": 0.7912,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "demand_spike",
+  "metric": "service_level",
+  "mean": 0.3367,
+  "ci_low": 0.3172,
+  "ci_high": 0.3562,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "demand_spike",
+  "metric": "unmet_units",
+  "mean": 7578.5,
+  "ci_low": 7485.4447,
+  "ci_high": 7671.5553,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "demand_spike",
+  "metric": "recovery_days",
+  "mean": 2.55,
+  "ci_low": 2.3263,
+  "ci_high": 2.7737,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "demand_spike",
+  "metric": "total_cost",
+  "mean": 86300.975,
+  "ci_low": 86036.4675,
+  "ci_high": 86565.4825,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "demand_spike",
+  "metric": "fill_rate",
+  "mean": 0.9006,
+  "ci_low": 0.8994,
+  "ci_high": 0.9019,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "demand_spike",
+  "metric": "service_level",
+  "mean": 0.7867,
+  "ci_low": 0.7779,
+  "ci_high": 0.7954,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "demand_spike",
+  "metric": "unmet_units",
+  "mean": 3561.1,
+  "ci_low": 3517.1998,
+  "ci_high": 3605.0002,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "demand_spike",
+  "metric": "recovery_days",
+  "mean": 5.0,
+  "ci_low": 4.8578,
+  "ci_high": 5.1422,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "demand_spike",
+  "metric": "total_cost",
+  "mean": 86300.975,
+  "ci_low": 86036.4675,
+  "ci_high": 86565.4825,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "demand_spike",
+  "metric": "fill_rate",
+  "mean": 0.9006,
+  "ci_low": 0.8994,
+  "ci_high": 0.9019,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "demand_spike",
+  "metric": "service_level",
+  "mean": 0.7867,
+  "ci_low": 0.7779,
+  "ci_high": 0.7954,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "demand_spike",
+  "metric": "unmet_units",
+  "mean": 3561.1,
+  "ci_low": 3517.1998,
+  "ci_high": 3605.0002,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "demand_spike",
+  "metric": "recovery_days",
+  "mean": 5.0,
+  "ci_low": 4.8578,
+  "ci_high": 5.1422,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "demand_spike",
+  "metric": "total_cost",
+  "mean": 86300.975,
+  "ci_low": 86036.4675,
+  "ci_high": 86565.4825,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "demand_spike",
+  "metric": "fill_rate",
+  "mean": 0.9006,
+  "ci_low": 0.8994,
+  "ci_high": 0.9019,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "demand_spike",
+  "metric": "service_level",
+  "mean": 0.7867,
+  "ci_low": 0.7779,
+  "ci_high": 0.7954,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "demand_spike",
+  "metric": "unmet_units",
+  "mean": 3561.1,
+  "ci_low": 3517.1998,
+  "ci_high": 3605.0002,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "demand_spike",
+  "metric": "recovery_days",
+  "mean": 5.0,
+  "ci_low": 4.8578,
+  "ci_high": 5.1422,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "compound",
+  "metric": "total_cost",
+  "mean": 113590.96,
+  "ci_low": 112964.5342,
+  "ci_high": 114217.3858,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "compound",
+  "metric": "fill_rate",
+  "mean": 0.7512,
+  "ci_low": 0.7487,
+  "ci_high": 0.7537,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "compound",
+  "metric": "service_level",
+  "mean": 0.1817,
+  "ci_low": 0.1619,
+  "ci_high": 0.2015,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "compound",
+  "metric": "unmet_units",
+  "mean": 8917.25,
+  "ci_low": 8827.457,
+  "ci_high": 9007.043,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "fixed_order",
+  "scenario_key": "compound",
+  "metric": "recovery_days",
+  "mean": 1.75,
+  "ci_low": 1.3772,
+  "ci_high": 2.1228,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "compound",
+  "metric": "total_cost",
+  "mean": 97334.755,
+  "ci_low": 96972.4225,
+  "ci_high": 97697.0875,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "compound",
+  "metric": "fill_rate",
+  "mean": 0.7628,
+  "ci_low": 0.7604,
+  "ci_high": 0.7652,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "compound",
+  "metric": "service_level",
+  "mean": 0.2983,
+  "ci_low": 0.2909,
+  "ci_high": 0.3058,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "compound",
+  "metric": "unmet_units",
+  "mean": 8501.7,
+  "ci_low": 8416.0209,
+  "ci_high": 8587.3791,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "s_S",
+  "scenario_key": "compound",
+  "metric": "recovery_days",
+  "mean": 4.95,
+  "ci_low": 4.852,
+  "ci_high": 5.048,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "compound",
+  "metric": "total_cost",
+  "mean": 97334.755,
+  "ci_low": 96972.4225,
+  "ci_high": 97697.0875,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "compound",
+  "metric": "fill_rate",
+  "mean": 0.7628,
+  "ci_low": 0.7604,
+  "ci_high": 0.7652,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "compound",
+  "metric": "service_level",
+  "mean": 0.2983,
+  "ci_low": 0.2909,
+  "ci_high": 0.3058,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "compound",
+  "metric": "unmet_units",
+  "mean": 8501.7,
+  "ci_low": 8416.0209,
+  "ci_high": 8587.3791,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor",
+  "scenario_key": "compound",
+  "metric": "recovery_days",
+  "mean": 4.95,
+  "ci_low": 4.852,
+  "ci_high": 5.048,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "compound",
+  "metric": "total_cost",
+  "mean": 97334.755,
+  "ci_low": 96972.4225,
+  "ci_high": 97697.0875,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "compound",
+  "metric": "fill_rate",
+  "mean": 0.7628,
+  "ci_low": 0.7604,
+  "ci_high": 0.7652,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "compound",
+  "metric": "service_level",
+  "mean": 0.2983,
+  "ci_low": 0.2909,
+  "ci_high": 0.3058,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "compound",
+  "metric": "unmet_units",
+  "mean": 8501.7,
+  "ci_low": 8416.0209,
+  "ci_high": 8587.3791,
+  "n_runs": 20
+ },
+ {
+  "policy_key": "newsvendor_milp",
+  "scenario_key": "compound",
+  "metric": "recovery_days",
+  "mean": 4.95,
+  "ci_low": 4.852,
+  "ci_high": 5.048,
+  "n_runs": 20
+ }
+]

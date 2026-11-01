@@ -13,21 +13,17 @@ def get_policies():
 
 SCENARIO_MAP = {
     "baseline": None,
-    "normal": None,
-    "supplier_strike": {"type": "supplier_strike", "target": "SUP_1", "start": 5, "duration": 14},
-    "supplier_failure": {"type": "supplier_strike", "target": "SUP_1", "start": 5, "duration": 14},
-    "transport_delay": {"type": "transport_delay", "target": "WH_WEST", "start": 8, "duration": 10},
-    "demand_spike": {"type": "demand_spike", "target": "ALL", "start": 10, "duration": 7},
+    "supplier_outage": {"start": 5, "duration": 14},
+    "transport_delay": {"start": 8, "duration": 10},
+    "warehouse_down": {"start": 8, "duration": 10},
+    "demand_spike": {"start": 10, "duration": 7},
+    "compound": {"start": 5, "duration": 20},
 }
-
 POLICY_MAP = {
+    "fixed_order": "baseline_fixed",
+    "s_S": "forecast_newsvendor",
     "newsvendor": "forecast_newsvendor",
-    "forecast_newsvendor": "forecast_newsvendor",
-    "sS": "forecast_newsvendor",
-    "milp": "forecast_newsvendor",
-    "baseline": "baseline_fixed",
-    "fixed": "baseline_fixed",
-    "baseline_fixed": "baseline_fixed",
+    "newsvendor_milp": "forecast_newsvendor",
 }
 
 def run_simulation_experiment(policy_type="forecast_newsvendor", disruption=None, duration_days=30, seed=42):

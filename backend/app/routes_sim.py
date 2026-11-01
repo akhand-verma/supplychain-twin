@@ -1,11 +1,9 @@
-import time
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from . import models, schemas
-from ml import interface as mock_engine
+from . import models, schemas, sim_engine
 from .database import SessionLocal, get_db
 
 router = APIRouter()
@@ -17,12 +15,11 @@ def _run_job(run_id: int):
     try:
         run = db.get(models.SimulationRun, run_id)
         p = run.params
-        time.sleep(1.5)  # fake delay so you can build the 'loading' UI
         if run.kind == "simulate":
-            run.result = mock_engine.run_simulation(p["policy"], p["scenario"], p["seed"])
+            run.result = sim_engine.run_simulation(p["policy"], p["scenario"], p["seed"])
         else:
             run.result = {"results": [
-                mock_engine.run_monte_carlo(pk, p["scenario"], p["n_runs"])
+                sim_engine.run_monte_carlo(pk, p["scenario"], p["n_runs"])
                 for pk in p["policies"]]}
         run.status = "done"
         db.commit()
