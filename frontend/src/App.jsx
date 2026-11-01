@@ -2,6 +2,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import NetworkMap from './pages/NetworkMap.jsx'
 import InventoryForecast from './pages/InventoryForecast.jsx'
+import SimulationLab from './pages/SimulationLab.jsx'
 
 
 function Placeholder({ title }) {
@@ -37,7 +38,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<NetworkMap />} />
           <Route path="/inventory" element={<InventoryForecast />} />
-          <Route path="/lab" element={<Placeholder title="Simulation Lab" />} />
+          <Route path="/lab" element={<SimulationLab />} />
           <Route path="/compare" element={<Placeholder title="Strategy Comparison" />} />
           <Route path="/alerts" element={<Placeholder title="Alerts & Recommendations" />} />
           <Route path="/whatif" element={<Placeholder title="What-If Chat" />} />
